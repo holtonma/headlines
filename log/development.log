@@ -1,0 +1,11 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (70.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (32.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHeadlines (20091114202458)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (54.2ms)[0m   [0;1mCREATE TABLE "headlines" ("id" serial primary key, "title" character varying(255), "member_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (72.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091114202458')[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m

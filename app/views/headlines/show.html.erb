@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @headline.title %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%=h @headline.member_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_headline_path(@headline) %> |
+<%= link_to 'Back', headlines_path %>
